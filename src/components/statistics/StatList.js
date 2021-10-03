@@ -1,6 +1,5 @@
 import StatItem from './StatItem';
 import PropTypes from 'prop-types';
-// import RandomColor from './RandomColor';
 import s from './Statistics.module.css';
 
 export default function StatList({ items }) {

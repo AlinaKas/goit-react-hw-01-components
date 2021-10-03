@@ -16,3 +16,9 @@ Transaction.propTypes = {
   amount: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,
 };
+
+Transaction.defaultProps = {
+  type: 'Type not found',
+  amount: 'Amount not found',
+  currency: 'Currency not found',
+};

@@ -24,3 +24,8 @@ FriendList.propTypes = {
     }),
   ),
 };
+
+FriendList.defaultProps = {
+  avatar: '../../images/default.png',
+  isOnline: false,
+};

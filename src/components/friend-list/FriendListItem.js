@@ -6,7 +6,7 @@ export default function FriendListItem({ avatar, name, isOnline }) {
     <li className={s.item}>
       <span
         className={s.status}
-        style={{ backgroundColor: getOnlineStatus(isOnline) }}
+        style={{ backgroundColor: isOnline ? 'green' : 'red' }}
       ></span>
       <img className={s.avatar} src={avatar} alt={name} width="48" />
       <p className={s.name}>{name}</p>
@@ -14,14 +14,13 @@ export default function FriendListItem({ avatar, name, isOnline }) {
   );
 }
 
+FriendListItem.defaultProps = {
+  avatar: '../../images/default.png',
+  isOnline: false,
+};
+
 FriendListItem.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
 };
-
-function getOnlineStatus(status) {
-  let color = '';
-  status ? (color = 'green') : (color = 'red');
-  return color;
-}

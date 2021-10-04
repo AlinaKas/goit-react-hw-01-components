@@ -29,6 +29,10 @@ export default function Profile({ name, tag, location, avatar, stats }) {
   );
 }
 
+Profile.defaultProps = {
+  avatar: '../../images/default.png',
+};
+
 Profile.propsTypes = {
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,

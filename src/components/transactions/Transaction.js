@@ -11,14 +11,15 @@ export default function Transaction({ type, amount, currency }) {
   );
 }
 
+Transaction.defaultProps = {
+  type: 'Type not found',
+  amount: 'Amount not found',
+  currency: 'Currency not found',
+};
+
 Transaction.propTypes = {
   type: PropTypes.string.isRequired,
   amount: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,
 };
 
-Transaction.defaultProps = {
-  type: 'Type not found',
-  amount: 'Amount not found',
-  currency: 'Currency not found',
-};
